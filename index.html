@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b83c6" />
+  <meta name="description" content="Invitación digital temática Toy Story" />
+  <title>Invitación de Thiago</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="loader" class="loader" role="dialog" aria-modal="true" aria-labelledby="loader-title">
+    <div class="loader__sky" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="loader__panel">
+      <div class="loader__badge" aria-hidden="true">★</div>
+      <p class="eyebrow">UNA GRAN AVENTURA ESTÁ POR COMENZAR</p>
+      <h1 id="loader-title" class="loader__title">Thiago</h1>
+      <p class="loader__copy">Esta invitación contiene música. Ajustá el volumen y tocá entrar para comenzar.</p>
+      <button id="enter-button" class="button button--primary button--wide" type="button">
+        <span>Entrar a la aventura</span>
+        <span aria-hidden="true">🚀</span>
+      </button>
+    </div>
+  </div>
+
+  <button id="music-toggle" class="music-toggle" type="button" aria-label="Pausar música" hidden>
+    <span class="music-toggle__icon" aria-hidden="true">♪</span>
+  </button>
+
+  <audio id="audio" preload="auto" loop></audio>
+
+  <main class="page-shell">
+    <article class="invitation-card">
+      <section class="hero" aria-label="Portada de la invitación">
+        <div class="hero__backdrop"></div>
+        <div class="hero__clouds" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="hero__characters" aria-hidden="true">
+          <img id="character-image" class="hero__character" alt="" />
+        </div>
+
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--hero reveal">¡TENÉS UNA MISIÓN!</p>
+          <h1 id="guest-name" class="hero__name reveal">THIAGO</h1>
+          <p id="age-label" class="hero__age reveal">CUMPLE 2 AÑOS</p>
+        </div>
+      </section>
+
+      <section class="content-section intro-section reveal">
+        <span class="section-icon" aria-hidden="true">⭐</span>
+        <p id="invitation-message" class="intro-message">
+          Vení a celebrarlo junto a familia y amigos. ¡Nos divertiremos con muchos juegos y sorpresas!
+        </p>
+
+        <div class="portrait-wrap">
+          <img id="portrait" class="portrait" alt="Foto de Thiago" />
+        </div>
+      </section>
+
+      <section class="content-section event-section reveal">
+        <p class="section-kicker">LA MISIÓN COMIENZA</p>
+
+        <div class="date-card">
+          <p id="event-date" class="date-card__date">Martes 8 de Diciembre</p>
+          <div class="date-card__line"></div>
+          <p id="event-time" class="date-card__time">20:00 a 22:30 hs.</p>
+        </div>
+
+        <section class="countdown-card" aria-labelledby="countdown-title">
+          <span class="countdown-card__badge" aria-hidden="true">🚀</span>
+          <p class="countdown-card__eyebrow">CUENTA REGRESIVA</p>
+          <h2 id="countdown-title" class="countdown-card__title">¡Al infinito y más allá!</h2>
+
+          <div id="countdown" class="countdown" aria-live="polite">
+            <div class="countdown__unit"><span id="countdown-days" class="countdown__value">00</span><span class="countdown__label">Días</span></div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit"><span id="countdown-hours" class="countdown__value">00</span><span class="countdown__label">Hs</span></div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit"><span id="countdown-minutes" class="countdown__value">00</span><span class="countdown__label">Min</span></div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit"><span id="countdown-seconds" class="countdown__value">00</span><span class="countdown__label">Seg</span></div>
+          </div>
+
+          <p id="countdown-status" class="countdown-card__status"></p>
+        </section>
+
+        <div class="location-block">
+          <p class="section-kicker">DESTINO</p>
+          <div class="location-card">
+            <div class="location-card__icon" aria-hidden="true">📍</div>
+            <div>
+              <p id="event-venue" class="location-card__venue">Salón de Fiestas Cirilo</p>
+              <p id="event-address" class="location-card__address">Av. Álvarez Thomas 1320</p>
+            </div>
+          </div>
+        </div>
+
+        <a id="map-button" class="button button--secondary button--wide" href="#" target="_blank" rel="noopener noreferrer">
+          <span>Cómo llegar</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <img id="ribbon" class="ribbon" alt="" aria-hidden="true" />
+      </section>
+
+      <section class="content-section extra-section reveal">
+        <p class="section-kicker">MODO AVENTURA</p>
+        <div class="extra-card">
+          <span aria-hidden="true">🤠</span>
+          <p>Prepará tu mejor energía para una tarde llena de juegos, amigos y sorpresas.</p>
+          <span aria-hidden="true">🛸</span>
+        </div>
+      </section>
+
+      <section class="content-section confirmation-section reveal">
+        <span class="section-icon section-icon--small" aria-hidden="true">⭐</span>
+        <p class="section-kicker">CONFIRMACIÓN</p>
+        <h2 class="section-title">¿Te sumás a la misión?</h2>
+        <p class="section-copy">Confirmá tu asistencia por WhatsApp.</p>
+
+        <a id="whatsapp-button" class="button button--whatsapp button--wide" href="#" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">💬</span>
+          <span>Confirmar asistencia</span>
+        </a>
+      </section>
+
+      <footer class="footer">
+        <p>Diseñado por <a id="instagram-link" href="https://www.instagram.com/rossdigitalstudio/" target="_blank" rel="noopener noreferrer">@rossdigitalstudio</a></p>
+      </footer>
+    </article>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
